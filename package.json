@@ -4,7 +4,7 @@
   "description": "net server and client helpers",
   "main": "src/darius.js",
   "directories": {
-    "lib": "src",
+    "lib": "src"
   },
   "scripts": {
     "test": "make test"
@@ -18,11 +18,14 @@
   ],
   "author": "Sérgio Ramos <mail@sergioramos.me> (http://sergioramos.me)",
   "license": "MIT",
+  "dependencies": {
+    "msgpack-js": "0.2.x"
+  },
   "devDependencies": {
     "mocha-lcov-reporter": "0.0.1",
     "jscoverage": "0.3.x",
     "coveralls": "2.0.x",
     "mocha": "1.12.x",
     "chai": "1.7.x"
-  }
+  },
 }
