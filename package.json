@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "net server and client helpers",
   "main": "src/darius.js",
+  "directories": {
+    "lib": "src",
+  },
   "scripts": {
     "test": "make test"
   },
@@ -14,5 +17,12 @@
     "net"
   ],
   "author": "Sérgio Ramos <mail@sergioramos.me> (http://sergioramos.me)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha-lcov-reporter": "0.0.1",
+    "jscoverage": "0.3.x",
+    "coveralls": "2.0.x",
+    "mocha": "1.12.x",
+    "chai": "1.7.x"
+  }
 }

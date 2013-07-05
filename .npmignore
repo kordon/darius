@@ -1,0 +1,4 @@
+lib-cov/**
+coverage.cov
+.coveralls.yml
+.travis.yml
