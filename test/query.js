@@ -6,7 +6,7 @@ else
   var darius = require('..')
 
 
-suite('Query')
+suite('query')
 
 test('one', function (callback) {
   var server = darius.createServer().listen(9128, function () {

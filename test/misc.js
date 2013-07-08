@@ -6,7 +6,7 @@ else
   var darius = require('..')
 
 
-suite('Error')
+suite('error')
 
 test('request', function (callback) {
   darius.get('127.0.0.1:9128/', function (e) {
@@ -22,5 +22,28 @@ test('listen', function (callback) {
       callback()
       server.close()
     })
+  })
+})
+
+suite('success')
+
+test('callback', function (callback) {
+  var cbs = 0
+  
+  var server = darius.createServer().listen(9128, function () {
+    darius.get('127.0.0.1:9128/', function (e) {
+      assert(!e)
+      cbs += 1
+      
+      if(cbs === 2) callback()
+    })
+  })
+  
+  server.get('/', function (req) {
+    server.close()
+    
+    cbs += 1
+    
+    if(cbs === 2) callback()
   })
 })

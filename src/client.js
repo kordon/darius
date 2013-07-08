@@ -31,11 +31,6 @@ var request = function (address, method, body, callback) {
     if(callback && !called) callback(e)
     if(!callback) throw e
   })
-  
-  // socket.on('close', function (had_error) {
-  //   if(callback && had_error && !called) callback(new Error('socket was closed due to a transmission error'))
-  //   if(!callback) throw new Error('socket was closed due to a transmission error')
-  // })
 }
 
 /**
